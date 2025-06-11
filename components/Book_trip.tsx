@@ -116,6 +116,7 @@ const Book_trip = () => {
                   src="/Heart.svg"
                   width={24}
                   height={24}
+                  priority
                   className="cursor-pointer"
                 />
               </div>

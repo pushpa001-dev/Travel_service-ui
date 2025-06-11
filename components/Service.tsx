@@ -71,6 +71,7 @@ military customers"
         alt="mark"
         width={153}
         height={166}
+        priority
         className=" absolute right-0"
       />
     </section>

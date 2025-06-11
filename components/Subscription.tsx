@@ -81,6 +81,7 @@ const Subscription = () => {
           alt="mark"
           width={153}
           height={166}
+          priority
           className=" absolute right-0 bottom-0 -z-10"
         />
       </div>

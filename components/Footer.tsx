@@ -85,6 +85,7 @@ const Footer = () => {
                   alt="play"
                   width={107}
                   height={35}
+                  priority
                 />
                 <Image src="/apple.png" alt="play" width={107} height={35} />
               </div>
