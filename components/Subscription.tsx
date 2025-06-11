@@ -77,7 +77,7 @@ const Subscription = () => {
           />
         </div>
         <Image
-          src="/group 4.svg"
+          src="/group.svg"
           alt="mark"
           width={153}
           height={166}

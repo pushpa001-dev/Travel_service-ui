@@ -81,7 +81,7 @@ const Footer = () => {
               </h1>
               <div className="flex flex-row gap-[7px]">
                 <Image
-                  src="/Google play.png"
+                  src="/Google Play.png"
                   alt="play"
                   width={107}
                   height={35}

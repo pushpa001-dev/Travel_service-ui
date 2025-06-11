@@ -113,7 +113,7 @@ const Book_trip = () => {
                 </div>
                 <Image
                   alt="Heart"
-                  src="/Heart.svg"
+                  src="/heart.svg"
                   width={24}
                   height={24}
                   priority
