@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <section className="flex flex-row items-center justify-between  w-full px-[140px] py-[47px] absolute z-10 ">
       <div>
-        <Image src="/logo.svg" alt="logo" width={114.91} height={50} priority />
+        <Image src="/Logo.svg" alt="logo" width={114.91} height={50} priority />
       </div>
       <div className="flex flex-row items-center justify-between gap-[70px] font-sans">
         {NAV_LINKS.map((link) => (
