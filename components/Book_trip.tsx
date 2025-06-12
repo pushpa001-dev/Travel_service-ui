@@ -1,5 +1,12 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useSelector , useDispatch } from "react-redux";
+import { AppDispatch , RootState } from "@/store/store";
+import {increment , decrement , deleteAll} from "@/store/Ticket_counter/page"
+
+
+
 interface Book_tripProps {
   logo: string;
   title: string;
@@ -28,8 +35,11 @@ const Book_card = ({
   );
 };
 const Book_trip = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const counter = useSelector((state:RootState) => state.counter.value)
   return (
-    <section className="flex flex-row items-center justify-between mx-[155px] mt-[100px]">
+    <section className="flex flex-col justify-between mx-[155px] mt-[100px]">
+      <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col gap-[30px] w-full justify-start">
         <div className="flex flex-col gap-[15px]">
           <p className="font-poppins font-semibold text-[18px] text-themevil">
@@ -153,6 +163,21 @@ const Book_trip = () => {
           </div>
         </div>
       </div>
+      </div>
+      <div className="flex flex-row items-center justify-between bg-white-100 p-10 rounded-2xl w-[50%] shadow-md gap-[20px]">
+        <h1 className="w-full text-[24px] font-poppins font-bold text-darkblue">
+          {counter}
+          <span className="text-[18px] font-medium ml-4">
+          {counter <= 1 ? " Ticket" : " Tickets"}
+          </span>
+        </h1>
+        <div className="flex flex-row items-center justify-between w-full" >
+        <button onClick={() => dispatch(increment())} className="bg-themeyello py-2 px-5 shadow-md hover:shadow-lg shadow-themeyello/30 rounded-[5px] cursor-pointer"> <p className="text-[18px] font-bold text-white">Add</p> </button>
+        <button onClick={() => dispatch(decrement())} className="bg-lightred py-2 px-5 shadow-md hover:shadow-lg shadow-lightred/30 rounded-[5px] cursor-pointer"> <p className="text-[18px] font-bold text-white" > Remove </p> </button>
+        <button onClick={() => dispatch(deleteAll())} className="py-2 px-5 shadow-md hover:shadow-lg rounded-[5px] cursor-pointer"> <p className="text-[18px] font-bold ">Delete All</p> </button>
+      </div>
+      </div>
+
     </section>
   );
 };
